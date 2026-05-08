@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Helados Delicia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Estilos generales */
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #fff8f0;
+      color: #333;
+    }
+    header {
+      background: #ff6f61;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+    }
+    nav a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 50px 20px;
+      text-align: center;
+    }
+    h2 {
+      color: #ff6f61;
+    }
+    /* Productos */
+    .productos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      width: 250px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    /* Formulario de contacto */
+    form {
+      max-width: 400px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    input, textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      background: #ff6f61;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #e85c50;
+    }
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🍦 Helados Delicia</h1>
+    <nav>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#productos">Productos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <section id="nosotros">
+    <h2>Quiénes Somos</h2>
+    <p>En Helados Delicia elaboramos helados artesanales con ingredientes frescos y naturales. 
+       Nuestra misión es endulzar la vida de nuestros clientes con sabores únicos.</p>
+  </section>
+
+  <section id="productos">
+    <h2>Nuestros Sabores</h2>
+    <div class="productos">
+      <div class="card">
+        <img src="https://via.placeholder.com/250x150.png?text=Chocolate" alt="Helado de Chocolate">
+        <h3>Chocolate</h3>
+        <p>Intenso y cremoso, hecho con cacao puro.</p>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/250x150.png?text=Vainilla" alt="Helado de Vainilla">
+        <h3>Vainilla</h3>
+        <p>Clásico y suave, con esencia natural.</p>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/250x150.png?text=Fresa" alt="Helado de Fresa">
+        <h3>Fresa</h3>
+        <p>Refrescante y natural, con fruta fresca.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <h2>Contáctanos</h2>
+    <form onsubmit="enviarFormulario(event)">
+      <input type="text" placeholder="Tu nombre" required>
+      <input type="email" placeholder="Tu correo" required>
+      <textarea placeholder="Tu mensaje" rows="5" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+    <p>Email: contacto@heladosdelicia.com</p>
+    <p>Teléfono: +57 300 123 4567</p>
+  </section>
+
+  <footer>
+    <p>© 2026 Helados Delicia - Todos los derechos reservados</p>
+  </footer>
+
+  <script>
+    function enviarFormulario(event) {
+      event.preventDefault();
+      alert("¡Gracias por contactarnos! Te responderemos pronto.");
+    }
+  </script>
+</body>
+</html>
